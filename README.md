@@ -40,7 +40,7 @@ provide details regarding the tag and file location . If the tag is not found in
 the given tag does not exist , or if the file doesnot exist at that tag it is informed to user that no such file found in that tag otherwise, the file's 
 tag is removed . 
 
-RENAMING A FILE :
+UPDATING TAG  :
 
 If a file is renamed in the system , then the system is suppose to provide the program with suitable input of, if updation is done using tag name or tag color , 
 then the files previous storage location and where it is currently going to be stored is taken as input , along with tag where we want to update it , and then the given file's previous data related to tag is deleted and new data is inserted back .
