@@ -219,6 +219,8 @@ class Preprocessing
              break;
           }
           tag_by_name[key].push_back(value);
+          string k=key+"--"+value;
+          tag_name.insert(k);
           getline(in,st);
        }
     }
@@ -247,6 +249,8 @@ class Preprocessing
              break;
           }
           tag_by_color[key].push_back(value);
+           string k=key+"--"+value;
+          tag_clr.insert(k);
           getline(in,st);
        }
     }
@@ -462,7 +466,9 @@ class Delete
          if(x==fl)
          {
             string s=tag+"--"+fl;
+            cout<<s<<endl;
             delete_from_name_file(s);
+            if(tag_name.find(s)!=tag_name.end()) tag_name.erase(s);
             tag_by_name.erase(tag);
             for(string y:present)
             {
@@ -489,6 +495,7 @@ class Delete
          {
             string s=tag+"--"+fl;
             cout<<s<<endl;
+            if(tag_clr.find(s)!=tag_clr.end()) tag_clr.erase(s);
             delete_from_color_file(s);
             tag_by_color.erase(tag);
             for(string y:present)
@@ -634,7 +641,6 @@ int main()
           cout<<"How would you like to update tag?\n1.Update by tag name\n2.Update by tag colour"<<endl;
           string choice;
           cin>>choice;
-          system("clear");
           if(choice=="1"){
           string prev,fl,nw;
           cout<<"Enter the tag where the file was stored earlier"<<endl;
