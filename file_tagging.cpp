@@ -580,7 +580,7 @@ int main()
     prx.process();
     while(1>0)
     {
-       cout<<"Enter 1 to create tag \nEnter 2 to search file \nEnter 3 to view all the tags \nEnter 4 to delete file from the taging \nEnter 5 to update the tag \nEnter 6 to rename the file location \n Press any other key to exit"<<endl;
+       cout<<"Enter 1 to create tag \nEnter 2 to search tag \nEnter 3 to view all the tags \nEnter 4 to delete file from the taging \nEnter 5 to update the tag \nEnter 6 to rename the file location \n Press any other key to exit"<<endl;
        cin>>n;
        if(n=="1")
        ip.input1();
