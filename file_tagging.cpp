@@ -580,7 +580,7 @@ int main()
     prx.process();
     while(1>0)
     {
-       cout<<"Enter 1 to create tag \nEnter 2 to search tag \nEnter 3 to view all the tags \nEnter 4 to delete file from the taging \nEnter 5 to update the tag \nEnter 6 to rename the file location \n Press any other key to exit"<<endl;
+       cout<<"Enter 1 to create tag \nEnter 2 to search tag \nEnter 3 to view all the tags \nEnter 4 to delete file from the taging \nEnter 5 to update the tag \nEnter 6 to rename the file location \nEnter 7 to view tag and files \nPress any other key to exit"<<endl;
        cin>>n;
        if(n=="1")
        ip.input1();
@@ -673,6 +673,27 @@ int main()
           string new_file;
           cin>>new_file;
           ren.rename_the_file(old_file,new_file);
+        }
+        else if(n == "7")
+        {
+            cout<<"Display files along with tag_by_name"<<endl;
+            for(auto it:tag_by_name)
+            {
+                cout<<"Tag is "<<it.first<<endl;
+                cout<<"The files are:"<<endl;
+                for(string x:it.second)
+                cout<<x<<" ";
+                cout<<endl;
+            }
+            cout<<"Display files along with tag_by_color"<<endl;
+            for(auto it:tag_by_name)
+            {
+                cout<<"Tag is "<<it.first<<endl;
+                cout<<"The files are:"<<endl;
+                for(string x:it.second)
+                cout<<x<<" ";
+                cout<<endl;
+            }
         }
        else
        break; 
